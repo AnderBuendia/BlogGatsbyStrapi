@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estates",
+  "info": {
+    "name": "Estates",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "rooms": {
+      "type": "integer",
+      "required": true
+    },
+    "parking": {
+      "type": "integer",
+      "required": true
+    },
+    "bathrooms": {
+      "required": true,
+      "type": "integer"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "category": {
+      "model": "categories"
+    },
+    "agents": {
+      "model": "agents"
+    }
+  }
+}
