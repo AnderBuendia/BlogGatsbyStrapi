@@ -17,5 +17,6 @@ gatsby clean
 
 To run strapi server, navigate into server folder and run this command:
 ```shell
+cd packages/server
 npm run develop
 ```
